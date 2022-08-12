@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		49DFE46E28A5066000BDCA99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE46D28A5066000BDCA99 /* AppDelegate.swift */; };
 		49DFE47028A5066000BDCA99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */; };
-		49DFE47228A5066000BDCA99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE47128A5066000BDCA99 /* ViewController.swift */; };
-		49DFE47528A5066000BDCA99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DFE47328A5066000BDCA99 /* Main.storyboard */; };
+		49DFE47228A5066000BDCA99 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE47128A5066000BDCA99 /* SearchViewController.swift */; };
 		49DFE47828A5066000BDCA99 /* QonaqZhai.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE47628A5066000BDCA99 /* QonaqZhai.xcdatamodeld */; };
 		49DFE47A28A5066400BDCA99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DFE47928A5066400BDCA99 /* Assets.xcassets */; };
 		49DFE47D28A5066400BDCA99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DFE47B28A5066400BDCA99 /* LaunchScreen.storyboard */; };
 		49DFE48828A5066500BDCA99 /* QonaqZhaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE48728A5066500BDCA99 /* QonaqZhaiTests.swift */; };
 		49DFE49228A5066500BDCA99 /* QonaqZhaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE49128A5066500BDCA99 /* QonaqZhaiUITests.swift */; };
 		49DFE49428A5066500BDCA99 /* QonaqZhaiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE49328A5066500BDCA99 /* QonaqZhaiUITestsLaunchTests.swift */; };
+		49DFE4A128A5282D00BDCA99 /* SearchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE4A028A5282D00BDCA99 /* SearchDetailsView.swift */; };
+		49DFE4A328A5460500BDCA99 /* SearchDetailsFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE4A228A5460500BDCA99 /* SearchDetailsFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,7 @@
 		49DFE46A28A5066000BDCA99 /* QonaqZhai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QonaqZhai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DFE46D28A5066000BDCA99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49DFE47128A5066000BDCA99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		49DFE47428A5066000BDCA99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49DFE47128A5066000BDCA99 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		49DFE47728A5066000BDCA99 /* QonaqZhai.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QonaqZhai.xcdatamodel; sourceTree = "<group>"; };
 		49DFE47928A5066400BDCA99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49DFE47C28A5066400BDCA99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		49DFE48D28A5066500BDCA99 /* QonaqZhaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QonaqZhaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DFE49128A5066500BDCA99 /* QonaqZhaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QonaqZhaiUITests.swift; sourceTree = "<group>"; };
 		49DFE49328A5066500BDCA99 /* QonaqZhaiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QonaqZhaiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		49DFE4A028A5282D00BDCA99 /* SearchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsView.swift; sourceTree = "<group>"; };
+		49DFE4A228A5460500BDCA99 /* SearchDetailsFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		495C9E5D28A6A5730079A2C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49DFE47128A5066000BDCA99 /* SearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		495C9E5E28A6A57F0079A2C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49DFE47B28A5066400BDCA99 /* LaunchScreen.storyboard */,
+				49DFE4A228A5460500BDCA99 /* SearchDetailsFieldView.swift */,
+				49DFE4A028A5282D00BDCA99 /* SearchDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		495C9E5F28A6A58E0079A2C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		495C9E6028A6A5930079A2C7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		495C9E6128A6A59A0079A2C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49DFE47928A5066400BDCA99 /* Assets.xcassets */,
+				49DFE46D28A5066000BDCA99 /* AppDelegate.swift */,
+				49DFE47E28A5066400BDCA99 /* Info.plist */,
+				49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		49DFE46128A5066000BDCA99 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +146,12 @@
 		49DFE46C28A5066000BDCA99 /* QonaqZhai */ = {
 			isa = PBXGroup;
 			children = (
-				49DFE46D28A5066000BDCA99 /* AppDelegate.swift */,
-				49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */,
-				49DFE47128A5066000BDCA99 /* ViewController.swift */,
-				49DFE47328A5066000BDCA99 /* Main.storyboard */,
-				49DFE47928A5066400BDCA99 /* Assets.xcassets */,
-				49DFE47B28A5066400BDCA99 /* LaunchScreen.storyboard */,
-				49DFE47E28A5066400BDCA99 /* Info.plist */,
+				495C9E6028A6A5930079A2C7 /* Managers */,
+				495C9E5F28A6A58E0079A2C7 /* Models */,
+				495C9E5E28A6A57F0079A2C7 /* Views */,
+				495C9E5D28A6A5730079A2C7 /* Controllers */,
 				49DFE47628A5066000BDCA99 /* QonaqZhai.xcdatamodeld */,
+				495C9E6128A6A59A0079A2C7 /* Resources */,
 			);
 			path = QonaqZhai;
 			sourceTree = "<group>";
@@ -236,7 +279,6 @@
 			files = (
 				49DFE47D28A5066400BDCA99 /* LaunchScreen.storyboard in Resources */,
 				49DFE47A28A5066400BDCA99 /* Assets.xcassets in Resources */,
-				49DFE47528A5066000BDCA99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49DFE47228A5066000BDCA99 /* ViewController.swift in Sources */,
+				49DFE47228A5066000BDCA99 /* SearchViewController.swift in Sources */,
 				49DFE46E28A5066000BDCA99 /* AppDelegate.swift in Sources */,
+				49DFE4A328A5460500BDCA99 /* SearchDetailsFieldView.swift in Sources */,
 				49DFE47828A5066000BDCA99 /* QonaqZhai.xcdatamodeld in Sources */,
+				49DFE4A128A5282D00BDCA99 /* SearchDetailsView.swift in Sources */,
 				49DFE47028A5066000BDCA99 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,14 +345,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		49DFE47328A5066000BDCA99 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49DFE47428A5066000BDCA99 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		49DFE47B28A5066400BDCA99 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,9 +483,11 @@
 				INFOPLIST_FILE = QonaqZhai/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,7 +497,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -474,9 +512,11 @@
 				INFOPLIST_FILE = QonaqZhai/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,7 +526,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

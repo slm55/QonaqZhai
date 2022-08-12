@@ -33,7 +33,6 @@ class TabBarViewController: UITabBarController {
         nav1.navigationBar.tintColor = .label
         nav2.navigationBar.tintColor = .label
         nav3.navigationBar.tintColor = .label
-        nav4.navigationBar.tintColor = .label
         
         nav1.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 1)
         nav2.tabBarItem = UITabBarItem(title: "Saved", image: UIImage(systemName: "heart"), tag: 1)
@@ -43,7 +42,6 @@ class TabBarViewController: UITabBarController {
         nav1.navigationBar.prefersLargeTitles = false
         nav2.navigationBar.prefersLargeTitles = false
         nav3.navigationBar.prefersLargeTitles = false
-        nav4.navigationBar.prefersLargeTitles = false
         
         tabBar.tintColor = .systemBlue
         

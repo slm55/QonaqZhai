@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495C9E6328A6A6700079A2C7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C9E6228A6A6700079A2C7 /* TabBarViewController.swift */; };
 		49DFE46E28A5066000BDCA99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE46D28A5066000BDCA99 /* AppDelegate.swift */; };
 		49DFE47028A5066000BDCA99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */; };
 		49DFE47228A5066000BDCA99 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE47128A5066000BDCA99 /* SearchViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		495C9E6228A6A6700079A2C7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		49DFE46A28A5066000BDCA99 /* QonaqZhai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QonaqZhai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DFE46D28A5066000BDCA99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				49DFE47128A5066000BDCA99 /* SearchViewController.swift */,
+				495C9E6228A6A6700079A2C7 /* TabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				49DFE46E28A5066000BDCA99 /* AppDelegate.swift in Sources */,
 				49DFE4A328A5460500BDCA99 /* SearchDetailsFieldView.swift in Sources */,
 				49DFE47828A5066000BDCA99 /* QonaqZhai.xcdatamodeld in Sources */,
+				495C9E6328A6A6700079A2C7 /* TabBarViewController.swift in Sources */,
 				49DFE4A128A5282D00BDCA99 /* SearchDetailsView.swift in Sources */,
 				49DFE47028A5066000BDCA99 /* SceneDelegate.swift in Sources */,
 			);

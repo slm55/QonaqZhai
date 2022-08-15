@@ -13,7 +13,14 @@ enum SearchDetailsFieldViewCategory: String {
     case NumberOfGuests
 }
 
+protocol SearchDetailsFieldViewDelegate: AnyObject {
+    func didTapDetailsFieldView(with category: SearchDetailsFieldViewCategory)
+}
+
 class SearchDetailsFieldView: UIView {
+    weak var delegate: SearchDetailsFieldViewDelegate?
+    private var category: SearchDetailsFieldViewCategory?
+    
     private let iconImageView: UIImageView = {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -62,6 +69,8 @@ class SearchDetailsFieldView: UIView {
     }
     
     func configure(with category: SearchDetailsFieldViewCategory){
+        self.category = category
+        
         switch category {
         case .Search:
             iconImageView.image = UIImage(systemName: "magnifyingglass")
@@ -73,13 +82,15 @@ class SearchDetailsFieldView: UIView {
             iconImageView.image = UIImage(systemName: "person.fill")
             textLabel.text = "1 room · 2 adults · No children"
         }
-        
         iconImageView.image = iconImageView.image?.withAlignmentRectInsets(UIEdgeInsets(top: -16, left: -16, bottom: -16, right: -16))
     }
     
     @objc func handleTap(gesture: UILongPressGestureRecognizer) {
         if gesture.state == .began {
             backgroundColor = .secondarySystemFill
+            if let category = category {
+                delegate?.didTapDetailsFieldView(with: category)
+            }
         } else if gesture.state == .ended || gesture.state == .cancelled {
             backgroundColor = .systemBackground
         }

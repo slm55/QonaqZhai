@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SearchDetailsViewDelegate: AnyObject {
+    func didTapDetailsFieldView(with category: SearchDetailsFieldViewCategory)
+}
+
 class SearchDetailsView: UIView {
+    weak var delegate: SearchDetailsViewDelegate?
+    
     private let stackView: UIStackView = {
         let sv = UIStackView()
         sv.axis = .vertical
@@ -77,9 +83,23 @@ class SearchDetailsView: UIView {
             searchButton.widthAnchor.constraint(equalTo: stackView.widthAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
+        
+        setupSearchDetailsFieldViews()
     }
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    private func setupSearchDetailsFieldViews(){
+        searchField.delegate = self
+        calendarField.delegate = self
+        numberOfGuestsField.delegate = self
+    }
+}
+
+extension SearchDetailsView: SearchDetailsFieldViewDelegate {
+    func didTapDetailsFieldView(with category: SearchDetailsFieldViewCategory) {
+        self.delegate?.didTapDetailsFieldView(with: category)
     }
 }

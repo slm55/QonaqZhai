@@ -8,10 +8,29 @@
 import UIKit
 
 class SearchLocationViewController: UIViewController {
-    private let searchController: UISearchController = {
-        let searchController = UISearchController()
-        searchController.searchBar.showsCancelButton = false
-        let textField = searchController.searchBar.searchTextField
+    private let searchBar = UISearchBar()
+    
+    private let resultsTableView = UITableView()
+    
+    private let results = [String]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        view.addSubview(searchBar)
+        setupSearchBar()
+    }
+    
+    private func setupSearchBar(){
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        let constraints = [
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            searchBar.widthAnchor.constraint(equalTo: view.widthAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+        
+        let textField = searchBar.searchTextField
         textField.backgroundColor = .systemBackground
         textField.placeholder = "Enter destination"
         textField.layer.borderWidth = 6
@@ -21,23 +40,13 @@ class SearchLocationViewController: UIViewController {
         configuration.image = UIImage(systemName: "chevron.left")
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
         let button = UIButton()
+        button.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         button.configuration = configuration
         textField.leftView = button
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        textField.centerXAnchor.constraint(equalTo: searchController.searchBar.centerXAnchor).isActive = true
-        textField.widthAnchor.constraint(equalTo: searchController.searchBar.widthAnchor, constant: -32).isActive = true
-        return searchController
-    }()
-    
-    private let resultsTableView = UITableView()
-    
-    private let results = [String]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        navigationItem.searchController = searchController
+        textField.centerXAnchor.constraint(equalTo: searchBar.centerXAnchor).isActive = true
+        textField.widthAnchor.constraint(equalTo: searchBar.widthAnchor, constant: -32).isActive = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -46,6 +55,10 @@ class SearchLocationViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navigationItem.searchController?.searchBar.becomeFirstResponder()
+        searchBar.searchTextField.becomeFirstResponder()
+    }
+    
+    @objc private func didTapBackButton(){
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -24,6 +24,7 @@ class SearchViewController: DynamicScrollableViewController {
     }
     
     private func setupSearchDetailsView(){
+        searchDetailsView.delegate = self
         searchDetailsView.frame = CGRect(x: 16, y: 16, width: view.frame.width - 32, height: 264)
         mainContentContainerView.addSubview(searchDetailsView)
     }
@@ -90,5 +91,20 @@ class SearchViewController: DynamicScrollableViewController {
         
     }
     
+}
+
+extension SearchViewController: SearchDetailsViewDelegate {
+    func didTapDetailsFieldView(with category: SearchDetailsFieldViewCategory) {
+        switch category {
+        case .Search:
+            let vc = SearchLocationViewController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        case .Calendar:
+            navigationController?.pushViewController(SearchLocationViewController(), animated: true)
+        case .NumberOfGuests:
+            navigationController?.pushViewController(SearchLocationViewController(), animated: true)
+        }
+    }
 }
 

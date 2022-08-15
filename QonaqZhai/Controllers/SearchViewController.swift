@@ -8,24 +8,12 @@
 import UIKit
 
 
-class SearchViewController: UIViewController {
-    private let scrollView: UIScrollView = {
-        let sv = UIScrollView()
-        sv.translatesAutoresizingMaskIntoConstraints = false
-        return sv
-    }()
-    
-    private let mainContentContainerView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+class SearchViewController: DynamicScrollableViewController {
     
     private let searchDetailsView = SearchDetailsView()
     
     override func loadView() {
         super.loadView()
-        setupScrollView()
         setupSearchDetailsView()
         setupDiscountsView()
     }
@@ -33,31 +21,6 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-    }
-    
-    private func setupScrollView(){
-        view.addSubview(scrollView)
-        scrollView.addSubview(mainContentContainerView)
-        
-        let constraints = [
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            mainContentContainerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            mainContentContainerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            mainContentContainerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            mainContentContainerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
-        ]
-        NSLayoutConstraint.activate(constraints)
-        
-        let widthConstraint = NSLayoutConstraint(item: mainContentContainerView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1.0, constant: 0)
-        widthConstraint.isActive = true
-        
-        let heightConstraint = NSLayoutConstraint(item: mainContentContainerView, attribute: .height, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .height, multiplier: 1.0, constant: 0)
-        heightConstraint.isActive = true
-        heightConstraint.priority = .defaultLow
-        
     }
     
     private func setupSearchDetailsView(){
@@ -71,10 +34,10 @@ class SearchViewController: UIViewController {
         discountsView.layoutMargins = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         discountsView.layer.borderColor = UIColor.systemGray.cgColor
         discountsView.layer.borderWidth = 1
+        discountsView.layer.cornerRadius = 8
         
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
         stackView.spacing = 16
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -92,11 +55,10 @@ class SearchViewController: UIViewController {
         textLabel.textColor = .label
         stackView.addArrangedSubview(textLabel)
         
-        var configuration = UIButton.Configuration.bordered()
+        var configuration = UIButton.Configuration.filled()
         configuration.title = "Sign in"
         configuration.baseBackgroundColor = .systemBlue
         configuration.baseForegroundColor = .white
-        configuration.titlePadding = 16
         let button = UIButton(configuration: configuration, primaryAction: nil)
         stackView.addArrangedSubview(button)
         
@@ -114,13 +76,14 @@ class SearchViewController: UIViewController {
             discountsView.topAnchor.constraint(equalTo: searchDetailsView.bottomAnchor, constant: 24),
             discountsView.leadingAnchor.constraint(equalTo: mainContentContainerView.leadingAnchor, constant: 16),
             discountsView.trailingAnchor.constraint(equalTo: mainContentContainerView.trailingAnchor, constant: -16),
-            discountsView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 8),
+            discountsView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 16),
+            discountsView.bottomAnchor.constraint(equalTo: mainContentContainerView.bottomAnchor),
             stackView.topAnchor.constraint(equalTo: discountsView.layoutMarginsGuide.topAnchor),
             stackView.leadingAnchor.constraint(equalTo: discountsView.layoutMarginsGuide.leadingAnchor),
             stackView.widthAnchor.constraint(equalTo: discountsView.layoutMarginsGuide.widthAnchor, multiplier: 0.6),
             imageView.leadingAnchor.constraint(equalTo: stackView.trailingAnchor),
             imageView.trailingAnchor.constraint(equalTo: discountsView.layoutMarginsGuide.trailingAnchor),
-            imageView.centerYAnchor.constraint(equalTo: stackView.centerYAnchor)
+            imageView.centerYAnchor.constraint(equalTo: stackView.centerYAnchor),
         ]
         
         NSLayoutConstraint.activate(constraints)

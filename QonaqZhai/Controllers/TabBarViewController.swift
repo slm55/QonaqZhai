@@ -13,9 +13,9 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         let vc1 = SearchViewController()
-        let vc2 = UIViewController()
-        let vc3 = UIViewController()
-        let vc4 = UIViewController()
+        let vc2 = SavedViewController()
+        let vc3 = BookingsViewController()
+        let vc4 = SearchLocationViewController()
         
         vc1.title = "QonaqZhai"
         vc2.title = "Saved"

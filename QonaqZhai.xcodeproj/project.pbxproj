@@ -13,6 +13,7 @@
 		499ECE8728A90495003A902B /* DynamicScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8628A90495003A902B /* DynamicScrollableViewController.swift */; };
 		499ECE8928A92055003A902B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8828A92055003A902B /* ProfileViewController.swift */; };
 		499ECE8B28A9225A003A902B /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8A28A9225A003A902B /* SearchLocationViewController.swift */; };
+		499ECE8D28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8C28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift */; };
 		49DFE46E28A5066000BDCA99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE46D28A5066000BDCA99 /* AppDelegate.swift */; };
 		49DFE47028A5066000BDCA99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */; };
 		49DFE47228A5066000BDCA99 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE47128A5066000BDCA99 /* SearchViewController.swift */; };
@@ -50,6 +51,7 @@
 		499ECE8628A90495003A902B /* DynamicScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicScrollableViewController.swift; sourceTree = "<group>"; };
 		499ECE8828A92055003A902B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		499ECE8A28A9225A003A902B /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
+		499ECE8C28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundCurrentLocationTableViewCell.swift; sourceTree = "<group>"; };
 		49DFE46A28A5066000BDCA99 /* QonaqZhai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QonaqZhai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DFE46D28A5066000BDCA99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				49DFE47B28A5066400BDCA99 /* LaunchScreen.storyboard */,
 				49DFE4A228A5460500BDCA99 /* SearchDetailsFieldView.swift */,
 				49DFE4A028A5282D00BDCA99 /* SearchDetailsView.swift */,
+				499ECE8C28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				499ECE8528A9041A003A902B /* BookingsViewController.swift in Sources */,
 				499ECE8928A92055003A902B /* ProfileViewController.swift in Sources */,
 				49DFE4A128A5282D00BDCA99 /* SearchDetailsView.swift in Sources */,
+				499ECE8D28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift in Sources */,
 				499ECE8728A90495003A902B /* DynamicScrollableViewController.swift in Sources */,
 				499ECE8328A8FCB8003A902B /* SavedViewController.swift in Sources */,
 				49DFE47028A5066000BDCA99 /* SceneDelegate.swift in Sources */,

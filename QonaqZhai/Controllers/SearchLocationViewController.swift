@@ -19,6 +19,7 @@ class SearchLocationViewController: UIViewController {
         view.backgroundColor = .systemBackground
         view.addSubview(searchBar)
         setupSearchBar()
+        setupTableView()
     }
     
     private func setupSearchBar(){
@@ -39,6 +40,7 @@ class SearchLocationViewController: UIViewController {
         var configuration = UIButton.Configuration.plain()
         configuration.image = UIImage(systemName: "chevron.left")
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+        configuration.baseForegroundColor = .label
         let button = UIButton()
         button.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         button.configuration = configuration
@@ -60,5 +62,43 @@ class SearchLocationViewController: UIViewController {
     
     @objc private func didTapBackButton(){
         dismiss(animated: true, completion: nil)
+    }
+    
+    private func setupTableView(){
+        view.addSubview(resultsTableView)
+        resultsTableView.translatesAutoresizingMaskIntoConstraints = false
+        resultsTableView.register(AroundCurrentLocationTableViewCell.self, forCellReuseIdentifier: AroundCurrentLocationTableViewCell.identifier)
+        
+        let constraints = [
+            resultsTableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            resultsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            resultsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            resultsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+        
+        resultsTableView.delegate = self
+        resultsTableView.dataSource = self
+    }
+}
+
+extension SearchLocationViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if results.isEmpty {
+            return 1
+        } else {
+            return results.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = resultsTableView.dequeueReusableCell(withIdentifier: AroundCurrentLocationTableViewCell.identifier, for: indexPath) as? AroundCurrentLocationTableViewCell else {
+            return UITableViewCell()
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        resultsTableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -14,6 +14,9 @@
 		499ECE8928A92055003A902B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8828A92055003A902B /* ProfileViewController.swift */; };
 		499ECE8B28A9225A003A902B /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8A28A9225A003A902B /* SearchLocationViewController.swift */; };
 		499ECE8D28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8C28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift */; };
+		49B125AA28ACFDD10022495C /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B125A928ACFDD10022495C /* APICaller.swift */; };
+		49B125AC28ACFE4F0022495C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B125AB28ACFE4F0022495C /* Location.swift */; };
+		49B125AE28AD0B140022495C /* SearchLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B125AD28AD0B140022495C /* SearchLocationTableViewCell.swift */; };
 		49DFE46E28A5066000BDCA99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE46D28A5066000BDCA99 /* AppDelegate.swift */; };
 		49DFE47028A5066000BDCA99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */; };
 		49DFE47228A5066000BDCA99 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE47128A5066000BDCA99 /* SearchViewController.swift */; };
@@ -25,6 +28,7 @@
 		49DFE49428A5066500BDCA99 /* QonaqZhaiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE49328A5066500BDCA99 /* QonaqZhaiUITestsLaunchTests.swift */; };
 		49DFE4A128A5282D00BDCA99 /* SearchDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE4A028A5282D00BDCA99 /* SearchDetailsView.swift */; };
 		49DFE4A328A5460500BDCA99 /* SearchDetailsFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFE4A228A5460500BDCA99 /* SearchDetailsFieldView.swift */; };
+		860B53BE910B4B0C437FFD94 /* Pods_QonaqZhai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA355C70E4FD74B7D64151F4 /* Pods_QonaqZhai.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,9 @@
 		499ECE8828A92055003A902B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		499ECE8A28A9225A003A902B /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
 		499ECE8C28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundCurrentLocationTableViewCell.swift; sourceTree = "<group>"; };
+		49B125A928ACFDD10022495C /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		49B125AB28ACFE4F0022495C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		49B125AD28AD0B140022495C /* SearchLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationTableViewCell.swift; sourceTree = "<group>"; };
 		49DFE46A28A5066000BDCA99 /* QonaqZhai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QonaqZhai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DFE46D28A5066000BDCA99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +74,9 @@
 		49DFE49328A5066500BDCA99 /* QonaqZhaiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QonaqZhaiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		49DFE4A028A5282D00BDCA99 /* SearchDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsView.swift; sourceTree = "<group>"; };
 		49DFE4A228A5460500BDCA99 /* SearchDetailsFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailsFieldView.swift; sourceTree = "<group>"; };
+		7192E38C5DC5BAEE4F69A6DE /* Pods-QonaqZhai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QonaqZhai.release.xcconfig"; path = "Target Support Files/Pods-QonaqZhai/Pods-QonaqZhai.release.xcconfig"; sourceTree = "<group>"; };
+		BA355C70E4FD74B7D64151F4 /* Pods_QonaqZhai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QonaqZhai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1652938E2C8DD04482D5C6 /* Pods-QonaqZhai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QonaqZhai.debug.xcconfig"; path = "Target Support Files/Pods-QonaqZhai/Pods-QonaqZhai.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860B53BE910B4B0C437FFD94 /* Pods_QonaqZhai.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +126,7 @@
 				49DFE4A228A5460500BDCA99 /* SearchDetailsFieldView.swift */,
 				49DFE4A028A5282D00BDCA99 /* SearchDetailsView.swift */,
 				499ECE8C28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift */,
+				49B125AD28AD0B140022495C /* SearchLocationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +134,7 @@
 		495C9E5F28A6A58E0079A2C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				49B125AB28ACFE4F0022495C /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,6 +142,7 @@
 		495C9E6028A6A5930079A2C7 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				49B125A928ACFDD10022495C /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -138,7 +152,6 @@
 			children = (
 				49DFE47928A5066400BDCA99 /* Assets.xcassets */,
 				49DFE46D28A5066000BDCA99 /* AppDelegate.swift */,
-				49DFE47E28A5066400BDCA99 /* Info.plist */,
 				49DFE46F28A5066000BDCA99 /* SceneDelegate.swift */,
 			);
 			path = Resources;
@@ -151,6 +164,8 @@
 				49DFE48628A5066500BDCA99 /* QonaqZhaiTests */,
 				49DFE49028A5066500BDCA99 /* QonaqZhaiUITests */,
 				49DFE46B28A5066000BDCA99 /* Products */,
+				9262F97B225F762CEB9742CD /* Pods */,
+				7D6ABECA9115C98E2CAAA995 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +182,7 @@
 		49DFE46C28A5066000BDCA99 /* QonaqZhai */ = {
 			isa = PBXGroup;
 			children = (
+				49DFE47E28A5066400BDCA99 /* Info.plist */,
 				495C9E6028A6A5930079A2C7 /* Managers */,
 				495C9E5F28A6A58E0079A2C7 /* Models */,
 				495C9E5E28A6A57F0079A2C7 /* Views */,
@@ -194,6 +210,23 @@
 			path = QonaqZhaiUITests;
 			sourceTree = "<group>";
 		};
+		7D6ABECA9115C98E2CAAA995 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA355C70E4FD74B7D64151F4 /* Pods_QonaqZhai.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9262F97B225F762CEB9742CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD1652938E2C8DD04482D5C6 /* Pods-QonaqZhai.debug.xcconfig */,
+				7192E38C5DC5BAEE4F69A6DE /* Pods-QonaqZhai.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49DFE49728A5066500BDCA99 /* Build configuration list for PBXNativeTarget "QonaqZhai" */;
 			buildPhases = (
+				026743FF3F67A5D768AA32F1 /* [CP] Check Pods Manifest.lock */,
 				49DFE46628A5066000BDCA99 /* Sources */,
 				49DFE46728A5066000BDCA99 /* Frameworks */,
 				49DFE46828A5066000BDCA99 /* Resources */,
+				56D151A082AEA534785163FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,6 +354,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		026743FF3F67A5D768AA32F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QonaqZhai-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56D151A082AEA534785163FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QonaqZhai/Pods-QonaqZhai-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QonaqZhai/Pods-QonaqZhai-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QonaqZhai/Pods-QonaqZhai-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49DFE46628A5066000BDCA99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -327,11 +404,14 @@
 				49DFE47228A5066000BDCA99 /* SearchViewController.swift in Sources */,
 				49DFE46E28A5066000BDCA99 /* AppDelegate.swift in Sources */,
 				49DFE4A328A5460500BDCA99 /* SearchDetailsFieldView.swift in Sources */,
+				49B125AA28ACFDD10022495C /* APICaller.swift in Sources */,
 				499ECE8B28A9225A003A902B /* SearchLocationViewController.swift in Sources */,
 				49DFE47828A5066000BDCA99 /* QonaqZhai.xcdatamodeld in Sources */,
 				495C9E6328A6A6700079A2C7 /* TabBarViewController.swift in Sources */,
+				49B125AC28ACFE4F0022495C /* Location.swift in Sources */,
 				499ECE8528A9041A003A902B /* BookingsViewController.swift in Sources */,
 				499ECE8928A92055003A902B /* ProfileViewController.swift in Sources */,
+				49B125AE28AD0B140022495C /* SearchLocationTableViewCell.swift in Sources */,
 				49DFE4A128A5282D00BDCA99 /* SearchDetailsView.swift in Sources */,
 				499ECE8D28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift in Sources */,
 				499ECE8728A90495003A902B /* DynamicScrollableViewController.swift in Sources */,
@@ -502,6 +582,7 @@
 		};
 		49DFE49828A5066500BDCA99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1652938E2C8DD04482D5C6 /* Pods-QonaqZhai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -531,6 +612,7 @@
 		};
 		49DFE49928A5066500BDCA99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7192E38C5DC5BAEE4F69A6DE /* Pods-QonaqZhai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

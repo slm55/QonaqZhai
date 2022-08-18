@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SearchLocationViewController: UIViewController {
     private let searchBar = UISearchBar()
     
     private let resultsTableView = UITableView()
     
-    private let results = [String]()
+    private let locations: BehaviorRelay<[Location]> = BehaviorRelay(value: [])
+    
+    private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,28 @@ class SearchLocationViewController: UIViewController {
         view.addSubview(searchBar)
         setupSearchBar()
         setupTableView()
+        
+        searchBar.rx.text.orEmpty
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe(onNext: {
+                value in
+                APICaller.shared.searchLocation(query: value) {
+                    [weak self] result in
+                    switch result{
+                    case .success(let locations):
+                        self?.locations.accept(locations)
+                    case .failure(_):
+                        self?.locations.accept([])
+                    }
+                }
+            }).disposed(by: bag)
+        
+        locations.bind(to: resultsTableView.rx.items(cellIdentifier: SearchLocationTableViewCell.identifier)) {
+            row, model, cell in
+            (cell as! SearchLocationTableViewCell).configure(with: SearchLocationTableViewCellViewModel(iconURL: model.imageURL, locationRegion: model.name, locationCity: model.cityName, locationName: model.region, locationCountry: model.country, locationProperties: model.nrHotels))
+        }.disposed(by: bag)
+        
     }
     
     private func setupSearchBar(){
@@ -68,6 +94,8 @@ class SearchLocationViewController: UIViewController {
         view.addSubview(resultsTableView)
         resultsTableView.translatesAutoresizingMaskIntoConstraints = false
         resultsTableView.register(AroundCurrentLocationTableViewCell.self, forCellReuseIdentifier: AroundCurrentLocationTableViewCell.identifier)
+        resultsTableView.register(SearchLocationTableViewCell.self, forCellReuseIdentifier: SearchLocationTableViewCell.identifier)
+        resultsTableView.rowHeight = 88
         
         let constraints = [
             resultsTableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
@@ -76,29 +104,6 @@ class SearchLocationViewController: UIViewController {
             resultsTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
-        
-        resultsTableView.delegate = self
-        resultsTableView.dataSource = self
     }
 }
 
-extension SearchLocationViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if results.isEmpty {
-            return 1
-        } else {
-            return results.count
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = resultsTableView.dequeueReusableCell(withIdentifier: AroundCurrentLocationTableViewCell.identifier, for: indexPath) as? AroundCurrentLocationTableViewCell else {
-            return UITableViewCell()
-        }
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        resultsTableView.deselectRow(at: indexPath, animated: true)
-    }
-}

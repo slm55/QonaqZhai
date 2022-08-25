@@ -96,7 +96,7 @@ class SearchLocationTableViewCell: UITableViewCell {
         if let url = URL(string: viewModel.iconURL) {
             icon.sd_setImage(with: url, completed: nil)
         }
-        locationNameLabel.text = viewModel.locationName
+        locationNameLabel.text = viewModel.locationCity
         locationCountryLabel.text = "City in \(viewModel.locationRegion != viewModel.locationCity ? viewModel.locationRegion + "," : "")\(viewModel.locationCountry)"
         
         switch viewModel.locationProperties {

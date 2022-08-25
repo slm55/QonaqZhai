@@ -15,7 +15,7 @@ class TabBarViewController: UITabBarController {
         let vc1 = SearchViewController()
         let vc2 = SavedViewController()
         let vc3 = BookingsViewController()
-        let vc4 = SearchLocationViewController()
+        let vc4 = DatePickerViewController()
         
         vc1.title = "QonaqZhai"
         vc2.title = "Saved"

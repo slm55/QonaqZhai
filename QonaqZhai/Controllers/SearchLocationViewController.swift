@@ -25,11 +25,29 @@ class SearchLocationViewController: UIViewController {
         setupSearchBar()
         setupTableView()
         
+        let cell = AroundCurrentLocationTableViewCell()
+        cell.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cell)
+        cell.topAnchor.constraint(equalTo: searchBar.bottomAnchor).isActive = true
+        cell.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        cell.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        cell.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        
+        
         searchBar.rx.text.orEmpty
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .subscribe(onNext: {
+                [weak self]
                 value in
+                if value == "" {
+                    cell.isHidden = false
+                    self?.resultsTableView.isHidden = true
+                } else {
+                    cell.isHidden = true
+                    self?.resultsTableView.isHidden = false
+                }
+                
                 APICaller.shared.searchLocation(query: value) {
                     [weak self] result in
                     switch result{
@@ -45,6 +63,7 @@ class SearchLocationViewController: UIViewController {
             row, model, cell in
             (cell as! SearchLocationTableViewCell).configure(with: SearchLocationTableViewCellViewModel(iconURL: model.imageURL, locationRegion: model.name, locationCity: model.cityName, locationName: model.region, locationCountry: model.country, locationProperties: model.nrHotels))
         }.disposed(by: bag)
+        
         
     }
     

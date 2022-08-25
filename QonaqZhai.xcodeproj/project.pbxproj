@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		495C9E6328A6A6700079A2C7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C9E6228A6A6700079A2C7 /* TabBarViewController.swift */; };
+		4986ABE428AFB16900E49709 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986ABE328AFB16900E49709 /* DatePickerViewController.swift */; };
 		499ECE8328A8FCB8003A902B /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8228A8FCB8003A902B /* SavedViewController.swift */; };
 		499ECE8528A9041A003A902B /* BookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8428A9041A003A902B /* BookingsViewController.swift */; };
 		499ECE8728A90495003A902B /* DynamicScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ECE8628A90495003A902B /* DynamicScrollableViewController.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		495C9E6228A6A6700079A2C7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4986ABE328AFB16900E49709 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		499ECE8228A8FCB8003A902B /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		499ECE8428A9041A003A902B /* BookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsViewController.swift; sourceTree = "<group>"; };
 		499ECE8628A90495003A902B /* DynamicScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicScrollableViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				499ECE8628A90495003A902B /* DynamicScrollableViewController.swift */,
 				499ECE8828A92055003A902B /* ProfileViewController.swift */,
 				499ECE8A28A9225A003A902B /* SearchLocationViewController.swift */,
+				4986ABE328AFB16900E49709 /* DatePickerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				499ECE8928A92055003A902B /* ProfileViewController.swift in Sources */,
 				49B125AE28AD0B140022495C /* SearchLocationTableViewCell.swift in Sources */,
 				49DFE4A128A5282D00BDCA99 /* SearchDetailsView.swift in Sources */,
+				4986ABE428AFB16900E49709 /* DatePickerViewController.swift in Sources */,
 				499ECE8D28AAD5BA003A902B /* AroundCurrentLocationTableViewCell.swift in Sources */,
 				499ECE8728A90495003A902B /* DynamicScrollableViewController.swift in Sources */,
 				499ECE8328A8FCB8003A902B /* SavedViewController.swift in Sources */,
